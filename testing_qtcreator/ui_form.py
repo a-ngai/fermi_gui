@@ -26,23 +26,17 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(712, 591)
+        MainWindow.resize(662, 669)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.tabWidget = QTabWidget(self.centralwidget)
         self.tabWidget.setObjectName(u"tabWidget")
+        self.tabWidget.setEnabled(True)
+        self.tabWidget.setGeometry(QRect(20, 10, 621, 511))
         self.tabWidget.setContextMenuPolicy(Qt.ContextMenuPolicy.PreventContextMenu)
-        self.tab = QWidget()
-        self.tab.setObjectName(u"tab")
-        self.gridLayoutWidget_2 = QWidget(self.tab)
-        self.gridLayoutWidget_2.setObjectName(u"gridLayoutWidget_2")
-        self.gridLayoutWidget_2.setGeometry(QRect(170, 270, 401, 151))
-        self.gridLayout_3 = QGridLayout(self.gridLayoutWidget_2)
-        self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.scrollArea = QScrollArea(self.tab)
+        self.tab_vmi_main = QWidget()
+        self.tab_vmi_main.setObjectName(u"tab_vmi_main")
+        self.scrollArea = QScrollArea(self.tab_vmi_main)
         self.scrollArea.setObjectName(u"scrollArea")
         self.scrollArea.setGeometry(QRect(210, 40, 61, 131))
         self.scrollArea.setWidgetResizable(True)
@@ -50,12 +44,12 @@ class Ui_MainWindow(object):
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
         self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 59, 129))
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-        self.fetchNewFiles = QCommandLinkButton(self.tab)
+        self.fetchNewFiles = QCommandLinkButton(self.tab_vmi_main)
         self.fetchNewFiles.setObjectName(u"fetchNewFiles")
-        self.fetchNewFiles.setGeometry(QRect(10, 190, 121, 31))
-        self.tabWidget_2 = QTabWidget(self.tab)
+        self.fetchNewFiles.setGeometry(QRect(10, 210, 121, 31))
+        self.tabWidget_2 = QTabWidget(self.tab_vmi_main)
         self.tabWidget_2.setObjectName(u"tabWidget_2")
-        self.tabWidget_2.setGeometry(QRect(290, 0, 231, 241))
+        self.tabWidget_2.setGeometry(QRect(310, 10, 271, 281))
         self.tab_7 = QWidget()
         self.tab_7.setObjectName(u"tab_7")
         self.tab_7.setAutoFillBackground(False)
@@ -87,7 +81,7 @@ class Ui_MainWindow(object):
         self.gridLayout_18.addLayout(self.vmi_subt, 0, 0, 1, 1)
 
         self.tabWidget_2.addTab(self.tab_10, "")
-        self.scrollArea_2 = QScrollArea(self.tab)
+        self.scrollArea_2 = QScrollArea(self.tab_vmi_main)
         self.scrollArea_2.setObjectName(u"scrollArea_2")
         self.scrollArea_2.setGeometry(QRect(30, 320, 91, 154))
         self.scrollArea_2.setWidgetResizable(True)
@@ -122,64 +116,70 @@ class Ui_MainWindow(object):
         self.gridLayout_19.addWidget(self.box_beta4, 4, 0, 1, 1)
 
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
-        self.label_files_used = QLabel(self.tab)
+        self.label_files_used = QLabel(self.tab_vmi_main)
         self.label_files_used.setObjectName(u"label_files_used")
         self.label_files_used.setGeometry(QRect(210, 20, 61, 16))
-        self.label_current_folder = QLabel(self.tab)
+        self.label_current_folder = QLabel(self.tab_vmi_main)
         self.label_current_folder.setObjectName(u"label_current_folder")
         self.label_current_folder.setGeometry(QRect(20, 10, 81, 16))
-        self.text_edit_current_folder = QTextEdit(self.tab)
+        self.text_edit_current_folder = QTextEdit(self.tab_vmi_main)
         self.text_edit_current_folder.setObjectName(u"text_edit_current_folder")
         self.text_edit_current_folder.setGeometry(QRect(20, 30, 111, 31))
-        self.label_update_status = QLabel(self.tab)
+        self.label_update_status = QLabel(self.tab_vmi_main)
         self.label_update_status.setObjectName(u"label_update_status")
-        self.label_update_status.setGeometry(QRect(20, 170, 91, 16))
-        self.text_display_update_status = QTextBrowser(self.tab)
+        self.label_update_status.setGeometry(QRect(20, 180, 91, 16))
+        self.text_display_update_status = QTextBrowser(self.tab_vmi_main)
         self.text_display_update_status.setObjectName(u"text_display_update_status")
-        self.text_display_update_status.setGeometry(QRect(100, 170, 71, 21))
-        self.commandLinkButton_4 = QCommandLinkButton(self.tab)
+        self.text_display_update_status.setGeometry(QRect(100, 180, 71, 31))
+        self.commandLinkButton_4 = QCommandLinkButton(self.tab_vmi_main)
         self.commandLinkButton_4.setObjectName(u"commandLinkButton_4")
-        self.commandLinkButton_4.setGeometry(QRect(10, 220, 81, 31))
-        self.label_abel_inversion = QLabel(self.tab)
+        self.commandLinkButton_4.setGeometry(QRect(10, 240, 81, 31))
+        self.label_abel_inversion = QLabel(self.tab_vmi_main)
         self.label_abel_inversion.setObjectName(u"label_abel_inversion")
         self.label_abel_inversion.setGeometry(QRect(20, 300, 91, 16))
-        self.autoNewestFolder = QCommandLinkButton(self.tab)
+        self.autoNewestFolder = QCommandLinkButton(self.tab_vmi_main)
         self.autoNewestFolder.setObjectName(u"autoNewestFolder")
-        self.autoNewestFolder.setGeometry(QRect(10, 90, 151, 31))
-        self.stayCurrentFolder = QCommandLinkButton(self.tab)
+        self.autoNewestFolder.setGeometry(QRect(10, 100, 151, 31))
+        self.stayCurrentFolder = QCommandLinkButton(self.tab_vmi_main)
         self.stayCurrentFolder.setObjectName(u"stayCurrentFolder")
-        self.stayCurrentFolder.setGeometry(QRect(10, 120, 151, 31))
-        self.test_display_folder_status = QTextBrowser(self.tab)
+        self.stayCurrentFolder.setGeometry(QRect(10, 130, 151, 31))
+        self.test_display_folder_status = QTextBrowser(self.tab_vmi_main)
         self.test_display_folder_status.setObjectName(u"test_display_folder_status")
-        self.test_display_folder_status.setGeometry(QRect(100, 70, 71, 21))
-        self.label_folder_status = QLabel(self.tab)
+        self.test_display_folder_status.setGeometry(QRect(100, 70, 71, 31))
+        self.label_folder_status = QLabel(self.tab_vmi_main)
         self.label_folder_status.setObjectName(u"label_folder_status")
         self.label_folder_status.setGeometry(QRect(20, 70, 91, 16))
-        self.tabWidget.addTab(self.tab, "")
-        self.tab_2 = QWidget()
-        self.tab_2.setObjectName(u"tab_2")
-        self.gridLayoutWidget_3 = QWidget(self.tab_2)
+        self.verticalLayoutWidget = QWidget(self.tab_vmi_main)
+        self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
+        self.verticalLayoutWidget.setGeometry(QRect(180, 320, 411, 151))
+        self.vmi_abel = QVBoxLayout(self.verticalLayoutWidget)
+        self.vmi_abel.setObjectName(u"vmi_abel")
+        self.vmi_abel.setContentsMargins(0, 0, 0, 0)
+        self.tabWidget.addTab(self.tab_vmi_main, "")
+        self.tab_image_correction = QWidget()
+        self.tab_image_correction.setObjectName(u"tab_image_correction")
+        self.gridLayoutWidget_3 = QWidget(self.tab_image_correction)
         self.gridLayoutWidget_3.setObjectName(u"gridLayoutWidget_3")
         self.gridLayoutWidget_3.setGeometry(QRect(30, 50, 191, 181))
         self.gridLayout_6 = QGridLayout(self.gridLayoutWidget_3)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
         self.gridLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.gridLayoutWidget_4 = QWidget(self.tab_2)
+        self.gridLayoutWidget_4 = QWidget(self.tab_image_correction)
         self.gridLayoutWidget_4.setObjectName(u"gridLayoutWidget_4")
         self.gridLayoutWidget_4.setGeometry(QRect(350, 50, 191, 181))
         self.gridLayout_7 = QGridLayout(self.gridLayoutWidget_4)
         self.gridLayout_7.setObjectName(u"gridLayout_7")
         self.gridLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.label_raw_image = QLabel(self.tab_2)
+        self.label_raw_image = QLabel(self.tab_image_correction)
         self.label_raw_image.setObjectName(u"label_raw_image")
         self.label_raw_image.setGeometry(QRect(40, 20, 71, 16))
-        self.label_corrected_image = QLabel(self.tab_2)
+        self.label_corrected_image = QLabel(self.tab_image_correction)
         self.label_corrected_image.setObjectName(u"label_corrected_image")
         self.label_corrected_image.setGeometry(QRect(350, 20, 61, 16))
-        self.applyCorrectionsImage = QCommandLinkButton(self.tab_2)
+        self.applyCorrectionsImage = QCommandLinkButton(self.tab_image_correction)
         self.applyCorrectionsImage.setObjectName(u"applyCorrectionsImage")
         self.applyCorrectionsImage.setGeometry(QRect(450, 240, 141, 41))
-        self.groupBox_4 = QGroupBox(self.tab_2)
+        self.groupBox_4 = QGroupBox(self.tab_image_correction)
         self.groupBox_4.setObjectName(u"groupBox_4")
         self.groupBox_4.setGeometry(QRect(30, 260, 191, 201))
         self.label_guess_ycenter = QLabel(self.groupBox_4)
@@ -212,10 +212,10 @@ class Ui_MainWindow(object):
         self.text_diesplay_guess_yzoom = QTextBrowser(self.groupBox_4)
         self.text_diesplay_guess_yzoom.setObjectName(u"text_diesplay_guess_yzoom")
         self.text_diesplay_guess_yzoom.setGeometry(QRect(80, 160, 51, 31))
-        self.getGuessCorrections = QCommandLinkButton(self.tab_2)
+        self.getGuessCorrections = QCommandLinkButton(self.tab_image_correction)
         self.getGuessCorrections.setObjectName(u"getGuessCorrections")
         self.getGuessCorrections.setGeometry(QRect(150, 240, 101, 41))
-        self.groupBox_5 = QGroupBox(self.tab_2)
+        self.groupBox_5 = QGroupBox(self.tab_image_correction)
         self.groupBox_5.setObjectName(u"groupBox_5")
         self.groupBox_5.setGeometry(QRect(320, 260, 191, 201))
         self.text_edit_correct_yzoom = QTextEdit(self.groupBox_5)
@@ -248,73 +248,73 @@ class Ui_MainWindow(object):
         self.label_correct_yzoom = QLabel(self.groupBox_5)
         self.label_correct_yzoom.setObjectName(u"label_correct_yzoom")
         self.label_correct_yzoom.setGeometry(QRect(80, 140, 49, 16))
-        self.tabWidget.addTab(self.tab_2, "")
-        self.tab_9 = QWidget()
-        self.tab_9.setObjectName(u"tab_9")
-        self.gridLayoutWidget_5 = QWidget(self.tab_9)
+        self.tabWidget.addTab(self.tab_image_correction, "")
+        self.tab_calibration = QWidget()
+        self.tab_calibration.setObjectName(u"tab_calibration")
+        self.gridLayoutWidget_5 = QWidget(self.tab_calibration)
         self.gridLayoutWidget_5.setObjectName(u"gridLayoutWidget_5")
         self.gridLayoutWidget_5.setGeometry(QRect(30, 100, 351, 101))
         self.gridLayout_8 = QGridLayout(self.gridLayoutWidget_5)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
         self.gridLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.gridLayoutWidget_6 = QWidget(self.tab_9)
+        self.gridLayoutWidget_6 = QWidget(self.tab_calibration)
         self.gridLayoutWidget_6.setObjectName(u"gridLayoutWidget_6")
         self.gridLayoutWidget_6.setGeometry(QRect(30, 300, 351, 91))
         self.gridLayout_9 = QGridLayout(self.gridLayoutWidget_6)
         self.gridLayout_9.setObjectName(u"gridLayout_9")
         self.gridLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.label_pixel_axis = QLabel(self.tab_9)
+        self.label_pixel_axis = QLabel(self.tab_calibration)
         self.label_pixel_axis.setObjectName(u"label_pixel_axis")
         self.label_pixel_axis.setGeometry(QRect(40, 70, 49, 16))
-        self.label_energy_axis = QLabel(self.tab_9)
+        self.label_energy_axis = QLabel(self.tab_calibration)
         self.label_energy_axis.setObjectName(u"label_energy_axis")
         self.label_energy_axis.setGeometry(QRect(40, 270, 49, 16))
-        self.test_edit_cal_points = QTextEdit(self.tab_9)
+        self.test_edit_cal_points = QTextEdit(self.tab_calibration)
         self.test_edit_cal_points.setObjectName(u"test_edit_cal_points")
         self.test_edit_cal_points.setGeometry(QRect(490, 80, 91, 151))
-        self.label_cal_points = QLabel(self.tab_9)
+        self.label_cal_points = QLabel(self.tab_calibration)
         self.label_cal_points.setObjectName(u"label_cal_points")
         self.label_cal_points.setGeometry(QRect(500, 50, 71, 21))
-        self.commandLinkButton_3 = QCommandLinkButton(self.tab_9)
+        self.commandLinkButton_3 = QCommandLinkButton(self.tab_calibration)
         self.commandLinkButton_3.setObjectName(u"commandLinkButton_3")
         self.commandLinkButton_3.setGeometry(QRect(420, 250, 172, 41))
-        self.label_cal_constant = QLabel(self.tab_9)
+        self.label_cal_constant = QLabel(self.tab_calibration)
         self.label_cal_constant.setObjectName(u"label_cal_constant")
         self.label_cal_constant.setGeometry(QRect(440, 300, 91, 16))
-        self.text_display_cal_constant = QTextBrowser(self.tab_9)
+        self.text_display_cal_constant = QTextBrowser(self.tab_calibration)
         self.text_display_cal_constant.setObjectName(u"text_display_cal_constant")
-        self.text_display_cal_constant.setGeometry(QRect(520, 300, 71, 21))
-        self.tabWidget.addTab(self.tab_9, "")
-        self.tab_11 = QWidget()
-        self.tab_11.setObjectName(u"tab_11")
-        self.tabWidget.addTab(self.tab_11, "")
-        self.tab_12 = QWidget()
-        self.tab_12.setObjectName(u"tab_12")
-        self.label_search_dir_for_newest_folder = QLabel(self.tab_12)
+        self.text_display_cal_constant.setGeometry(QRect(520, 300, 71, 31))
+        self.tabWidget.addTab(self.tab_calibration, "")
+        self.tab_tof_main = QWidget()
+        self.tab_tof_main.setObjectName(u"tab_tof_main")
+        self.tabWidget.addTab(self.tab_tof_main, "")
+        self.tab_settings = QWidget()
+        self.tab_settings.setObjectName(u"tab_settings")
+        self.label_search_dir_for_newest_folder = QLabel(self.tab_settings)
         self.label_search_dir_for_newest_folder.setObjectName(u"label_search_dir_for_newest_folder")
-        self.label_search_dir_for_newest_folder.setGeometry(QRect(380, 10, 211, 16))
-        self.text_edit_search_dir_for_newest_folder = QTextEdit(self.tab_12)
+        self.label_search_dir_for_newest_folder.setGeometry(QRect(320, 10, 211, 16))
+        self.text_edit_search_dir_for_newest_folder = QTextEdit(self.tab_settings)
         self.text_edit_search_dir_for_newest_folder.setObjectName(u"text_edit_search_dir_for_newest_folder")
-        self.text_edit_search_dir_for_newest_folder.setGeometry(QRect(380, 30, 171, 31))
-        self.label_tof_start = QLabel(self.tab_12)
+        self.text_edit_search_dir_for_newest_folder.setGeometry(QRect(320, 30, 171, 31))
+        self.label_tof_start = QLabel(self.tab_settings)
         self.label_tof_start.setObjectName(u"label_tof_start")
         self.label_tof_start.setGeometry(QRect(20, 180, 51, 16))
-        self.text_edit_tof_start = QTextEdit(self.tab_12)
+        self.text_edit_tof_start = QTextEdit(self.tab_settings)
         self.text_edit_tof_start.setObjectName(u"text_edit_tof_start")
         self.text_edit_tof_start.setGeometry(QRect(20, 200, 61, 31))
-        self.label_tof_stop = QLabel(self.tab_12)
+        self.label_tof_stop = QLabel(self.tab_settings)
         self.label_tof_stop.setObjectName(u"label_tof_stop")
         self.label_tof_stop.setGeometry(QRect(100, 180, 51, 16))
-        self.text_edit_tof_stop = QTextEdit(self.tab_12)
+        self.text_edit_tof_stop = QTextEdit(self.tab_settings)
         self.text_edit_tof_stop.setObjectName(u"text_edit_tof_stop")
         self.text_edit_tof_stop.setGeometry(QRect(100, 200, 61, 31))
-        self.box_slu_parity = QCheckBox(self.tab_12)
+        self.box_slu_parity = QCheckBox(self.tab_settings)
         self.box_slu_parity.setObjectName(u"box_slu_parity")
-        self.box_slu_parity.setGeometry(QRect(380, 280, 21, 22))
-        self.label_slu_parity = QLabel(self.tab_12)
+        self.box_slu_parity.setGeometry(QRect(320, 280, 21, 22))
+        self.label_slu_parity = QLabel(self.tab_settings)
         self.label_slu_parity.setObjectName(u"label_slu_parity")
-        self.label_slu_parity.setGeometry(QRect(410, 280, 121, 16))
-        self.groupBox = QGroupBox(self.tab_12)
+        self.label_slu_parity.setGeometry(QRect(350, 280, 121, 16))
+        self.groupBox = QGroupBox(self.tab_settings)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setGeometry(QRect(20, 20, 181, 151))
         self.gridLayout_15 = QGridLayout(self.groupBox)
@@ -324,10 +324,10 @@ class Ui_MainWindow(object):
 
         self.gridLayout_15.addWidget(self.label_files_per_cache, 0, 0, 1, 2)
 
-        self.test_edit_files_per_cache = QTextEdit(self.groupBox)
-        self.test_edit_files_per_cache.setObjectName(u"test_edit_files_per_cache")
+        self.text_edit_files_per_cache = QTextEdit(self.groupBox)
+        self.text_edit_files_per_cache.setObjectName(u"text_edit_files_per_cache")
 
-        self.gridLayout_15.addWidget(self.test_edit_files_per_cache, 1, 0, 1, 2)
+        self.gridLayout_15.addWidget(self.text_edit_files_per_cache, 1, 0, 1, 2)
 
         self.box_make_cache = QCheckBox(self.groupBox)
         self.box_make_cache.setObjectName(u"box_make_cache")
@@ -349,116 +349,101 @@ class Ui_MainWindow(object):
 
         self.gridLayout_15.addWidget(self.label_35, 3, 1, 1, 1)
 
-        self.groupBox_2 = QGroupBox(self.tab_12)
+        self.groupBox_2 = QGroupBox(self.tab_settings)
         self.groupBox_2.setObjectName(u"groupBox_2")
-        self.groupBox_2.setGeometry(QRect(380, 80, 170, 147))
-        self.gridLayout_14 = QGridLayout(self.groupBox_2)
-        self.gridLayout_14.setObjectName(u"gridLayout_14")
+        self.groupBox_2.setGeometry(QRect(320, 80, 241, 147))
         self.label_fore = QLabel(self.groupBox_2)
         self.label_fore.setObjectName(u"label_fore")
-
-        self.gridLayout_14.addWidget(self.label_fore, 0, 0, 1, 1)
-
+        self.label_fore.setGeometry(QRect(12, 31, 23, 16))
         self.label_back = QLabel(self.groupBox_2)
         self.label_back.setObjectName(u"label_back")
-
-        self.gridLayout_14.addWidget(self.label_back, 0, 1, 1, 1)
-
+        self.label_back.setGeometry(QRect(50, 32, 25, 16))
         self.box_fore_felonsluon = QCheckBox(self.groupBox_2)
         self.box_fore_felonsluon.setObjectName(u"box_fore_felonsluon")
-
-        self.gridLayout_14.addWidget(self.box_fore_felonsluon, 1, 0, 1, 1)
-
+        self.box_fore_felonsluon.setGeometry(QRect(12, 53, 16, 16))
         self.box_back_felonsluon = QCheckBox(self.groupBox_2)
         self.box_back_felonsluon.setObjectName(u"box_back_felonsluon")
-
-        self.gridLayout_14.addWidget(self.box_back_felonsluon, 1, 1, 1, 1)
-
+        self.box_back_felonsluon.setGeometry(QRect(50, 54, 16, 16))
         self.label_felonsluon = QLabel(self.groupBox_2)
         self.label_felonsluon.setObjectName(u"label_felonsluon")
-
-        self.gridLayout_14.addWidget(self.label_felonsluon, 1, 2, 1, 1)
-
+        self.label_felonsluon.setGeometry(QRect(140, 50, 84, 16))
         self.box_fore_felonsluoff = QCheckBox(self.groupBox_2)
         self.box_fore_felonsluoff.setObjectName(u"box_fore_felonsluoff")
-
-        self.gridLayout_14.addWidget(self.box_fore_felonsluoff, 2, 0, 1, 1)
-
+        self.box_fore_felonsluoff.setGeometry(QRect(12, 75, 16, 16))
         self.box_back_felonsluoff = QCheckBox(self.groupBox_2)
         self.box_back_felonsluoff.setObjectName(u"box_back_felonsluoff")
-
-        self.gridLayout_14.addWidget(self.box_back_felonsluoff, 2, 1, 1, 1)
-
+        self.box_back_felonsluoff.setGeometry(QRect(50, 76, 16, 16))
         self.label_felonsluoff = QLabel(self.groupBox_2)
         self.label_felonsluoff.setObjectName(u"label_felonsluoff")
-
-        self.gridLayout_14.addWidget(self.label_felonsluoff, 2, 2, 1, 1)
-
+        self.label_felonsluoff.setGeometry(QRect(140, 72, 85, 16))
         self.box_fore_feloffsluon = QCheckBox(self.groupBox_2)
         self.box_fore_feloffsluon.setObjectName(u"box_fore_feloffsluon")
-
-        self.gridLayout_14.addWidget(self.box_fore_feloffsluon, 3, 0, 1, 1)
-
+        self.box_fore_feloffsluon.setGeometry(QRect(12, 97, 16, 16))
         self.box_back_feloffsluon = QCheckBox(self.groupBox_2)
         self.box_back_feloffsluon.setObjectName(u"box_back_feloffsluon")
-
-        self.gridLayout_14.addWidget(self.box_back_feloffsluon, 3, 1, 1, 1)
-
+        self.box_back_feloffsluon.setGeometry(QRect(50, 98, 16, 16))
         self.label_feloffsluon = QLabel(self.groupBox_2)
         self.label_feloffsluon.setObjectName(u"label_feloffsluon")
-
-        self.gridLayout_14.addWidget(self.label_feloffsluon, 3, 2, 1, 1)
-
+        self.label_feloffsluon.setGeometry(QRect(140, 94, 85, 16))
         self.box_fore_feloffsluoff = QCheckBox(self.groupBox_2)
         self.box_fore_feloffsluoff.setObjectName(u"box_fore_feloffsluoff")
-
-        self.gridLayout_14.addWidget(self.box_fore_feloffsluoff, 4, 0, 1, 1)
-
+        self.box_fore_feloffsluoff.setGeometry(QRect(12, 119, 16, 16))
         self.box_back_feloffsluoff = QCheckBox(self.groupBox_2)
         self.box_back_feloffsluoff.setObjectName(u"box_back_feloffsluoff")
-
-        self.gridLayout_14.addWidget(self.box_back_feloffsluoff, 4, 1, 1, 1)
-
+        self.box_back_feloffsluoff.setGeometry(QRect(50, 120, 16, 16))
         self.lafel_feloffsluon = QLabel(self.groupBox_2)
         self.lafel_feloffsluon.setObjectName(u"lafel_feloffsluon")
-
-        self.gridLayout_14.addWidget(self.lafel_feloffsluon, 4, 2, 1, 1)
-
-        self.applyChangesSettings = QCommandLinkButton(self.tab_12)
+        self.lafel_feloffsluon.setGeometry(QRect(140, 116, 86, 16))
+        self.box_flip_feloffsluon = QCheckBox(self.groupBox_2)
+        self.box_flip_feloffsluon.setObjectName(u"box_flip_feloffsluon")
+        self.box_flip_feloffsluon.setGeometry(QRect(90, 98, 16, 16))
+        self.box_flip_felonsluon = QCheckBox(self.groupBox_2)
+        self.box_flip_felonsluon.setObjectName(u"box_flip_felonsluon")
+        self.box_flip_felonsluon.setGeometry(QRect(90, 54, 16, 16))
+        self.label_back_2 = QLabel(self.groupBox_2)
+        self.label_back_2.setObjectName(u"label_back_2")
+        self.label_back_2.setGeometry(QRect(90, 32, 25, 16))
+        self.box_flip_felonsluoff = QCheckBox(self.groupBox_2)
+        self.box_flip_felonsluoff.setObjectName(u"box_flip_felonsluoff")
+        self.box_flip_felonsluoff.setGeometry(QRect(90, 76, 16, 16))
+        self.box_flip_feloffsluoff = QCheckBox(self.groupBox_2)
+        self.box_flip_feloffsluoff.setObjectName(u"box_flip_feloffsluoff")
+        self.box_flip_feloffsluoff.setGeometry(QRect(90, 120, 16, 16))
+        self.applyChangesSettings = QCommandLinkButton(self.tab_settings)
         self.applyChangesSettings.setObjectName(u"applyChangesSettings")
         self.applyChangesSettings.setGeometry(QRect(440, 370, 121, 31))
-        self.text_edit_ke_start = QTextEdit(self.tab_12)
+        self.text_edit_ke_start = QTextEdit(self.tab_settings)
         self.text_edit_ke_start.setObjectName(u"text_edit_ke_start")
         self.text_edit_ke_start.setGeometry(QRect(20, 280, 41, 31))
-        self.label_ke_start = QLabel(self.tab_12)
+        self.label_ke_start = QLabel(self.tab_settings)
         self.label_ke_start.setObjectName(u"label_ke_start")
         self.label_ke_start.setGeometry(QRect(20, 260, 51, 16))
-        self.text_edit_ke_end = QTextEdit(self.tab_12)
+        self.text_edit_ke_end = QTextEdit(self.tab_settings)
         self.text_edit_ke_end.setObjectName(u"text_edit_ke_end")
         self.text_edit_ke_end.setGeometry(QRect(90, 280, 41, 31))
-        self.label_ke_end = QLabel(self.tab_12)
+        self.label_ke_end = QLabel(self.tab_settings)
         self.label_ke_end.setObjectName(u"label_ke_end")
         self.label_ke_end.setGeometry(QRect(90, 260, 51, 16))
-        self.text_edit_ke_bins = QTextEdit(self.tab_12)
+        self.text_edit_ke_bins = QTextEdit(self.tab_settings)
         self.text_edit_ke_bins.setObjectName(u"text_edit_ke_bins")
         self.text_edit_ke_bins.setGeometry(QRect(160, 280, 41, 31))
-        self.label_ke_bins = QLabel(self.tab_12)
+        self.label_ke_bins = QLabel(self.tab_settings)
         self.label_ke_bins.setObjectName(u"label_ke_bins")
         self.label_ke_bins.setGeometry(QRect(160, 260, 51, 16))
-        self.label_abel_inversion_data_path = QLabel(self.tab_12)
+        self.label_abel_inversion_data_path = QLabel(self.tab_settings)
         self.label_abel_inversion_data_path.setObjectName(u"label_abel_inversion_data_path")
         self.label_abel_inversion_data_path.setGeometry(QRect(20, 340, 131, 16))
-        self.text_edit_abel_inversion_data_path = QTextEdit(self.tab_12)
+        self.text_edit_abel_inversion_data_path = QTextEdit(self.tab_settings)
         self.text_edit_abel_inversion_data_path.setObjectName(u"text_edit_abel_inversion_data_path")
         self.text_edit_abel_inversion_data_path.setGeometry(QRect(20, 360, 171, 31))
-        self.tabWidget.addTab(self.tab_12, "")
-
-        self.verticalLayout_2.addWidget(self.tabWidget)
-
+        self.tabWidget.addTab(self.tab_settings, "")
+        self.print_browser = QTextBrowser(self.centralwidget)
+        self.print_browser.setObjectName(u"print_browser")
+        self.print_browser.setGeometry(QRect(20, 530, 621, 91))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 712, 21))
+        self.menubar.setGeometry(QRect(0, 0, 662, 21))
         self.menuFERMI_On_line_analysis_tool = QMenu(self.menubar)
         self.menuFERMI_On_line_analysis_tool.setObjectName(u"menuFERMI_On_line_analysis_tool")
         MainWindow.setMenuBar(self.menubar)
@@ -470,8 +455,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(2)
-        self.tabWidget_2.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget_2.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -512,7 +497,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Stay</p></body></html>", None))
         self.label_folder_status.setText(QCoreApplication.translate("MainWindow", u"Folder status:", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"VMI Main", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_vmi_main), QCoreApplication.translate("MainWindow", u"VMI Main", None))
         self.label_raw_image.setText(QCoreApplication.translate("MainWindow", u"Raw", None))
         self.label_corrected_image.setText(QCoreApplication.translate("MainWindow", u"Corrected", None))
         self.applyCorrectionsImage.setText(QCoreApplication.translate("MainWindow", u"Apply correction", None))
@@ -522,14 +507,94 @@ class Ui_MainWindow(object):
         self.label_guess_xzoom.setText(QCoreApplication.translate("MainWindow", u"x-zoom", None))
         self.label_guess_xcenter.setText(QCoreApplication.translate("MainWindow", u"x-center", None))
         self.label_guess_yzoom.setText(QCoreApplication.translate("MainWindow", u"y-zoom", None))
+        self.text_display_guess_xcenter.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.text_dsplay_guess_ycenter.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.text_display_guess_rotate.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.text_display_guess_xzoom.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
+        self.text_diesplay_guess_yzoom.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
         self.getGuessCorrections.setText(QCoreApplication.translate("MainWindow", u"Get guess", None))
         self.groupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Correction parameters", None))
+        self.text_edit_correct_yzoom.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">1</p></body></html>", None))
         self.label_correct_ycenter.setText(QCoreApplication.translate("MainWindow", u"y-center", None))
+        self.text_edit_correct_rotate.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">0</p></body></html>", None))
+        self.text_edit_correct_xcenter.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">0</p></body></html>", None))
+        self.text_edit_correct_xzoom.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">1</p></body></html>", None))
+        self.text_edit_correct_ycenter.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">0</p></body></html>", None))
         self.label_correct_rotate.setText(QCoreApplication.translate("MainWindow", u"rotate", None))
         self.label_correct_xzoom.setText(QCoreApplication.translate("MainWindow", u"x-zoom", None))
         self.label_correct_xcenter.setText(QCoreApplication.translate("MainWindow", u"x-center", None))
         self.label_correct_yzoom.setText(QCoreApplication.translate("MainWindow", u"y-zoom", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Image", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_image_correction), QCoreApplication.translate("MainWindow", u"Image", None))
         self.label_pixel_axis.setText(QCoreApplication.translate("MainWindow", u"Pixels", None))
         self.label_energy_axis.setText(QCoreApplication.translate("MainWindow", u"Energies", None))
         self.test_edit_cal_points.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -552,15 +617,39 @@ class Ui_MainWindow(object):
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_9), QCoreApplication.translate("MainWindow", u"Calibration", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_11), QCoreApplication.translate("MainWindow", u"TOF main", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_calibration), QCoreApplication.translate("MainWindow", u"Calibration", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_tof_main), QCoreApplication.translate("MainWindow", u"TOF main", None))
         self.label_search_dir_for_newest_folder.setText(QCoreApplication.translate("MainWindow", u"Auto-search newest folder in directory", None))
         self.label_tof_start.setText(QCoreApplication.translate("MainWindow", u"TOF start", None))
+        self.text_edit_tof_start.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">None</p></body></html>", None))
         self.label_tof_stop.setText(QCoreApplication.translate("MainWindow", u"TOF stop", None))
+        self.text_edit_tof_stop.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">None</p></body></html>", None))
         self.box_slu_parity.setText("")
         self.label_slu_parity.setText(QCoreApplication.translate("MainWindow", u"SLU@25Hz parity flip", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Cache settings", None))
         self.label_files_per_cache.setText(QCoreApplication.translate("MainWindow", u"Files per cache", None))
+        self.text_edit_files_per_cache.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">0</p></body></html>", None))
         self.box_make_cache.setText("")
         self.label_34.setText(QCoreApplication.translate("MainWindow", u"Make cache", None))
         self.box_load_from_cache.setText("")
@@ -580,6 +669,11 @@ class Ui_MainWindow(object):
         self.box_fore_feloffsluoff.setText("")
         self.box_back_feloffsluoff.setText("")
         self.lafel_feloffsluon.setText(QCoreApplication.translate("MainWindow", u"FEL: off, SLU: off", None))
+        self.box_flip_feloffsluon.setText("")
+        self.box_flip_felonsluon.setText("")
+        self.label_back_2.setText(QCoreApplication.translate("MainWindow", u"+/-", None))
+        self.box_flip_felonsluoff.setText("")
+        self.box_flip_feloffsluoff.setText("")
         self.applyChangesSettings.setText(QCoreApplication.translate("MainWindow", u"Apply changes", None))
         self.text_edit_ke_start.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
@@ -609,31 +703,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">None</p></body></html>", None))
         self.label_ke_bins.setText(QCoreApplication.translate("MainWindow", u"KE bins", None))
         self.label_abel_inversion_data_path.setText(QCoreApplication.translate("MainWindow", u"Abel inversion data file", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_12), QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_settings), QCoreApplication.translate("MainWindow", u"Settings", None))
         self.menuFERMI_On_line_analysis_tool.setTitle(QCoreApplication.translate("MainWindow", u"FERMI LDM On-line analysis tool", None))
     # retranslateUi
-from PySide6.QtWidgets import QMainWindow, QVBoxLayout, QWidget, QApplication
-class MainWindow(QMainWindow):
-
-    def __init__(self, *args, **kwargs):
-        super(MainWindow, self).__init__(*args, **kwargs)
-
-        layout = QVBoxLayout()
-        widget = QWidget()
-        widget.setLayout(layout)
-        self.setCentralWidget(widget)
-
-        self.show()
-
-
-import sys
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    tabWidgetApp = Ui_MainWindow()
-    w = MainWindow()
-
-    tabWidgetApp.setupUi(w)
-
-    sys.exit(app.exec())
-
 
